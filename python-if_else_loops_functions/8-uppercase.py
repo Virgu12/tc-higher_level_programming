@@ -7,4 +7,3 @@ def uppercase(str):
       else:
         texto_mudado += c
     print("{}".format(texto_mudado), end="")
-uppercase('')
