@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+def add(a, b):
+    soma = a + b
+    print(soma)
+    return soma
