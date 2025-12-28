@@ -3,7 +3,7 @@ from functools import reduce
 
 
 def calc_average(a_dictionary):
-    if not isinstance(a_dictionary, dict) or len(a_dictionary) == 0:
+    if not isinstance(a_dictionary, list) or len(a_dictionary) == 0:
         return 0, 0
    
     total_salary = reduce(lambda x, y: x + y['salary'], a_dictionary.values(), 0)
