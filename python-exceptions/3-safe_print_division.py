@@ -2,7 +2,7 @@
 def safe_print_division(a, b):
     conta = None
     try:
-         conta = a / b
+        conta = a / b
     except ZeroDivisionError:
         conta = None
     finally:
