@@ -6,5 +6,5 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         conta = None
     finally:
-        print('Inside result:' "{}".format(conta))
+        print('Inside result:', "{}".format(conta))
         return conta
