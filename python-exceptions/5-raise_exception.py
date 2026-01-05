@@ -3,4 +3,4 @@ def raise_exception():
     try:
         raise Exception("Exception raised")
     except Exception:
-        print("Exception raised")
+        print("Exception has been raised")
