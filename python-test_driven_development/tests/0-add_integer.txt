@@ -1,0 +1,37 @@
+módulo "0-add_integer.txt"
+==========================
+
+o módulo em questão fornece a função "add_integer(a, b=98)" que soma dois números.
+Como utilizar:
+---------------
+
+Importamos a função:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Caso 0, soma dois inteiros positivos:
+>>> add_integer(1, 2)
+3
+
+Caso 1, so um inteiro positivo (nesse caso, 98 se torna o outro valor que não foi inserido)
+>>> add_integer(1)
+99
+
+Caso 2, dois inteiros negativos:
+>>> add_integer(-1, -2)
+-3
+
+Caso 3, a é um valor que não é um inteiro ou float:
+>>> add_integer([4], 1)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+Caso 4, b é um valor que não é um inteiro ou float:
+>>> add_integer(4, [1])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+Caso 5, soma com floats (devem ser convertidos para int)
+>>> add_integer(10.5, 10.5)
+20
