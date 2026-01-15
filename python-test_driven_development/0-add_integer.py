@@ -2,6 +2,7 @@
 """
 Module provides a function that adds two integers
 Includes type checking and handle float numbers
+
 """
 
 

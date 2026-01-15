@@ -1,0 +1,51 @@
+módulo "2-matrix_divided"
+==========================
+
+O módulo em questão fornece a função "matrix_divided(matrix, div)"
+---------------
+
+Importamos a função:
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Caso 0, divisão de uma matriz valida que deve retornar valores arredondados para duas casas decimais:
+>>> matrix_divided([
+...    [1, 2, 3],
+...    [4, 5, 6]
+... ], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Caso 1, divisor é 0:
+>>> matrix_divided([
+...    [1, 2, 3],
+...    [4, 5, 6]
+... ], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+Caso 2, matriz não é uma lista de listas de floats e inteiros:
+>>> matrix_divided([
+...    [1, "Yoichi", 3],
+...    [4, 5, 6]
+... ], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Caso 3, matriz com tamanhos diferentes:
+>>> matrix_divided([
+...    [1, 2, 3],
+...    [4, 5]
+... ], 3)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+Caso 4, divisor não é inteiro ou float:
+>>> matrix_divided([
+...    [1, 2, 3],
+...    [4, 5, 6]
+... ], "Xis")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
