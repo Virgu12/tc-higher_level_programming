@@ -49,3 +49,12 @@ Caso 4, divisor não é inteiro ou float:
 Traceback (most recent call last):
     ...
 TypeError: div must be a number
+
+Caso 5, se div for float('Nan') ou float('inf'):
+>>> >>> matrix_divided([
+...    [1, 2, 3],
+...    [4, 5, 6]
+... ], float('-inf'))
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
