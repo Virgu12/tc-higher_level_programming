@@ -26,3 +26,12 @@ TypeError: last_name must be a string
 Caso 3, somente uma string válida recebida
 >>> say_my_name("Heisenberg")
 My name is Heisenberg 
+
+Caso 4, first_name é uma string vazia
+>>> say_my_name(" ", "Heisenberg")
+My name is   Heisenberg
+
+Caso 5, string com numeros
+>>> say_my_name("R2D2", "C3PO")
+My name is R2D2 C3PO
+
