@@ -15,7 +15,7 @@ def say_my_name(first_name, last_name=""):
 
     return:
         the string return the "My name is <first name> <last name>"
-    
+
     raise:
         TypeError: if not a string
     """
