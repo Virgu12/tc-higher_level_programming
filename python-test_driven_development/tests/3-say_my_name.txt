@@ -1,0 +1,28 @@
+módulo "3-say_my_name"
+==========================
+
+O módulo em questão fornece a função "def say_my_name(first_name, last_name="")"
+---------------
+
+Importamos a função:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Caso 0, recebe primeiro e segundo nome validos (strings):
+>>> say_my_name("Willian", "Afton")
+My name is Willian Afton
+
+Caso 1, first_name é um valor inválido:
+>>> say_my_name(67, "Afton")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+Caso 2, last_name é um valor inválido:
+>>> say_my_name("DIO", ["Brando"])
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+Caso 3, somente uma string válida recebida
+>>> say_my_name("Heisenberg")
+My name is Heisenberg
