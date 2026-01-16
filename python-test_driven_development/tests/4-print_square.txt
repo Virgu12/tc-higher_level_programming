@@ -1,0 +1,42 @@
+módulo "4-print_square"
+==========================
+
+O módulo em questão fornece a função "def print_square(size):"
+---------------
+
+Importamos a função:
+>>> print_square = __import__('4-print_square').print_square
+
+Caso 0, recebe um valor válido (um inteiro):
+>>> print_square(1)
+#
+
+Caso 1, não recebe nenhum valor:
+>>> print_square()
+Traceback (most recent call last):
+    ...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+Caso 2, recebe um valor que não é um inteiro:
+>>> print_square(12.5)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+Caso 3, valor recebido é menor que 0
+>>> print_square(-1)
+Traceback (most recent call last):
+    ...
+TypeError: size must be >= 0
+
+Caso 4, size é um valor infinito:
+>>> print_square(float('inf'))
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+Caso 5, size é NaN:
+>>> print_square(float('NaN'))
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
