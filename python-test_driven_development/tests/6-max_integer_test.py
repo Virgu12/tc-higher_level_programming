@@ -42,6 +42,20 @@ class test_max_integer(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer([1, None, 3])
 
+    def test_max_at_the_end(self):
+        self.assertEqual(max_integer([1, 2, 3, 99]), 99)
+    
+
+    def test_max_at_the_beginning(self):
+        self.assertEqual(max_integer([100, 2, 3, 99]), 100)
+
+
+    def test_max_in_the_middle(self):
+        self.assertEqual(max_integer([100, 101, 99]), 101)
+
+    def test_only_one_negative_number(self):
+        self.assertEqual(max_integer([2, 1, -100]), 2)
+
 
 if __name__ == '__main__':
     unittest.main()
